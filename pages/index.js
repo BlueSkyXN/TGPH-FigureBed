@@ -111,7 +111,7 @@ export default function Home() {
         </div>
       ))}
       {error && <div>Error: {error}</div>}
-      <footer style={{textAlign: "center", padding: "20px 0"}}>提示：各网站权利归相关网站持有人所有，本网站仅辅助上传用途，无审查、存储功能</footer>
+      <footer style={{textAlign: "center", padding: "20px 0"}}>提示：各网站、链接的版权和其它权利、义务、责任均归相关网站和域名持有人所有。<br></br>本网站仅辅助上传用途，无审查、存储功能</footer>
     </div>
   );
 }
