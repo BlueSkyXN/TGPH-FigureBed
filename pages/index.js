@@ -30,8 +30,19 @@ export default function Home() {
   }, []);
 
   const fileSelectedHandler = event => {
-    setSelectedFile(event.target.files[0]);
-  };
+  const file = event.target.files[0];
+  const fileSize = file.size / 1024 / 1024; // in MB
+  const fileType = file.type;
+  if (fileSize > 5) {
+    alert("文件大小不能超过5MB");
+    return;
+  }
+  if (fileType !== "image/jpeg" && fileType !== "image/png") {
+    alert("文件类型必须是.jpg或.png");
+    return;
+  }
+  setSelectedFile(file);
+};
 
   const apiSelectedHandler = event => {
     setSelectedApi(event.target.value);
